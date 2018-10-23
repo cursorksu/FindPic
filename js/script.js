@@ -2,14 +2,15 @@ const refs = {
     page: document.querySelector("body"),
     form: document.querySelector(".search-form"),
     btnSearch: document.querySelector(".search-form__btn"),
-    deleteUser: document.querySelector(".js-delete"),
+    delete: document.querySelector(".js-delete"),
+    more: document.querySelector(".js-more"),
 
     prev: document.querySelector(".js-prev"),
     next: document.querySelector(".js-next"),
     select: document.querySelector(".js-select"),
     close: document.querySelector(".js-close")
-
 };
+localStorage.setItem('img','choise')
 //Этот массив объектов временный для наглядности. Вместо него должен приходить массив объектов из АПИ
 const pictures = [
     {
