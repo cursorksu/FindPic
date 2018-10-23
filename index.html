@@ -24,42 +24,6 @@
     </header>
     <main class="main">
         <ul class="pict-list">
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
-            <li class="pict-list__item">
-                <img class="pict-list__img" src="images/bynns1-tif.png" alt="img">
-            </li>
 
         </ul>
         <button class="btn__show-more btn" data-active="js-more">Показать еще</button>
@@ -79,6 +43,13 @@
     </div>
 
 </div>
+<template id = "pict">
+    <li class="pict-list__item">
+        <img class="pict-list__img" src={{img}} alt="{{name}}">
+    </li>
+</template>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 

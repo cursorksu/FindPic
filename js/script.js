@@ -1,11 +1,94 @@
 const refs = {
-    popUpClose: document.querySelector(".js-close"),
     page: document.querySelector("body"),
-    form: document.querySelector(".serch-form"),
-    searchUser: document.querySelector(".js-search"),
+    form: document.querySelector(".search-form"),
+    btnSearch: document.querySelector(".search-form__btn"),
     deleteUser: document.querySelector(".js-delete"),
-    list: document.querySelector(".pict-list")
+
+    prev: document.querySelector(".js-prev"),
+    next: document.querySelector(".js-next"),
+    select: document.querySelector(".js-select"),
+    close: document.querySelector(".js-close")
+
 };
+//Этот массив объектов временный для наглядности. Вместо него должен приходить массив объектов из АПИ
+const pictures = [
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    },
+    {
+        img: 'images/bynns1-tif.png',
+        name: 'alt'
+    }
+    ];
+//Константы для рендера разметки
+const list =  document.querySelector('.pict-list');
+const sourse = document.querySelector('#pict').innerHTML.trim();
+const tpl = Handlebars.compile(sourse);
+
+const marcupHTML = (arr) => {
+    const marcup = arr
+        .reduce((acc, img) => acc + tpl(img), '');
+    list.innerHTML = marcup;
+}
+marcupHTML(pictures);
+
 
 const popUpClose = () => refs.page.classList.remove('pop-up_active');
 
@@ -24,5 +107,5 @@ function popUpOpen(event) {
 
 
 
-refs.list.addEventListener('click', popUpOpen);
-refs.popUpClose.addEventListener('click', popUpClose);
+list.addEventListener('click', popUpOpen);
+refs.close.addEventListener('click', popUpClose);
