@@ -1,0 +1,16 @@
+$tablet: "only screen and (max-width: 991px)"
+$phone: "only screen and (max-width: 562px)"
+
+@media #{$tablet}
+  .pict-list
+    grid-template-columns: repeat(2, 1fr)
+  .search-form__input
+    width: calc(100% - 110px)
+  .search-form
+    width: 100%
+
+@media #{$phone}
+  .pict-list
+    grid-template-columns: repeat(1, 1fr)
+  .logo
+    width: 280px
